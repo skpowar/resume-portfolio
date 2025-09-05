@@ -1,1 +1,356 @@
 
+
+<!DOCTYPE html>
+<!-- saved from url=(0049)file:///C:/Users/suneelpowar/Downloads/test6.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunil Powar – QA &amp; Security Testing Specialist</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root{
+      --bg:#f9f9fb;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#4b5563;
+      --line:#e5e7eb;
+      --accent:#2563eb;
+      --accent-2:#0ea5e9;
+      --chip:#eef2ff;
+    }
+    body.dark{
+      --bg:#0f172a;
+      --card:#0b1220;
+      --text:#e5e7eb;
+      --muted:#a1a1aa;
+      --line:#1f2937;
+      --accent:#60a5fa;
+      --accent-2:#38bdf8;
+      --chip:#0b2440;
+    }
+    /* Base */
+    html,body{height:100%}
+    body{
+      background:var(--bg);
+      color:var(--text);
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+      line-height:1.6;
+      transition: background .25s ease, color .25s ease;
+    }
+    .container{
+      max-width: 980px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+      transition: background .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+    /* Controls */
+    .controls{
+      display:flex; gap:.75rem; justify-content:flex-end; align-items:center; margin-bottom:.75rem;
+    }
+    .btn{
+      border:1px solid transparent;
+      background: var(--accent);
+      color:#fff;
+      padding:.5rem .85rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor:pointer;
+      transition: transform .06s ease, opacity .2s ease, background .25s ease, border-color .25s ease;
+    }
+    .btn.secondary{
+      background: transparent;
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    .btn:hover{opacity:.95}
+    .btn:active{transform: translateY(1px)}
+    .toggle{
+      display:inline-flex; align-items:center; gap:.5rem;
+      background: transparent; color: var(--accent);
+      border:1px solid var(--accent);
+    }
+    .toggle .icon{font-size:1rem; line-height:1}
+    /* Header */
+    h1{margin:.25rem 0 .25rem 0; font-size:2rem; letter-spacing:.2px}
+    .role{color: var(--accent); font-weight:600; margin-bottom:.5rem}
+    .contact{color:var(--muted); font-size:.98rem}
+    .contact a{color:var(--accent); text-decoration:none}
+    .rule{
+      height:1px; background: linear-gradient(to right, transparent, var(--line), transparent);
+      margin: 1rem 0 1.5rem 0;
+    }
+    /* Sections */
+    h2{
+      font-size:1.1rem;
+      text-transform: uppercase;
+      letter-spacing:.12em;
+      color: var(--muted);
+      margin: 1.25rem 0 .75rem 0;
+    }
+    .section{margin-bottom:1.25rem}
+    p{margin:.25rem 0 .5rem 0}
+    /* Lists */
+    ul{margin:.25rem 0 .75rem 0; padding-left:1.1rem}
+    li{margin:.3rem 0}
+    .subgrid{
+      display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.25rem;
+    }
+    @media (max-width: 780px){
+      .subgrid{grid-template-columns:1fr}
+    }
+    /* Chips (for quick-scan competencies) */
+    .chips{display:flex; flex-wrap:wrap; gap:.4rem; margin:.4rem 0 .8rem 0}
+    .chip{
+      background: var(--chip);
+      color: var(--text);
+      border:1px solid var(--line);
+      padding:.2rem .5rem; border-radius:999px; font-size:.83rem;
+    }
+    /* Subhead group items */
+    .item-head{font-weight:700}
+    .item-meta{font-style:italic; color:var(--muted)}
+    /* QR */
+    .qr{
+      display:flex; align-items:center; gap:1rem; margin-top:1.25rem;
+      padding:.9rem 1rem; border:1px dashed var(--line); border-radius:12px;
+    }
+    .qr img{width:112px; height:112px; border-radius:8px}
+    .qr .hint{color:var(--muted); font-size:.95rem}
+    /* Animation */
+    .anim{opacity:0; transform: translateY(10px)}
+    .anim.show{opacity:1; transform:none; transition: opacity .5s ease, transform .4s ease}
+    /* Print */
+    @media print{
+      .controls{display:none}
+      .container{box-shadow:none; border-color:#ddd}
+      a{color:#000; text-decoration:underline}
+      .qr{border-color:#ccc}
+    }
+  </style>
+</head>
+<body class="dark">
+  <div class="container">
+    <div class="controls">
+      <button class="btn toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="icon" id="themeIcon">☀️</span> Theme
+      </button>
+      <button class="btn" onclick="window.print()" aria-label="Download PDF">Download PDF</button>
+    </div>
+
+    <header class="anim show" style="transition-delay: 0ms;">
+      <h1>SUNIL POWAR</h1>
+      <div class="role">Quality Assurance &amp; Security Testing Specialist</div>
+      <div class="profile-section">
+  <img src="assets/avatar.png.png" alt="Sunil Powar Avatar" class="avatar" />
+</div>
+      <div class="contact">
+        📞 (726) 666-0715 | ✉️ <a href="mailto:sunilpowar@proton.me">sunilpowar@proton.me</a> | 🔗
+        <a href="https://linkedin.com/in/skpowar" target="_blank" rel="noopener">linkedin.com/in/skpowar</a>
+      </div>
+    </header>
+
+    <div class="rule"></div>
+
+    <section class="section anim show" style="transition-delay: 60ms;">
+      <h2>Professional summary</h2>
+      <p>Results-driven QA &amp; Security Testing Specialist with 5+ years of comprehensive experience in software quality assurance, test automation, and ethical hacking. Proven expertise in Agile methodologies, vulnerability assessment, and continuous process improvement. Demonstrated ability to deliver precise, audit-ready results with minimal supervision while maintaining strong analytical rigor. Seeking remote opportunities with innovative teams that prioritize technical excellence and professional growth.</p>
+      <div class="chips">
+        <span class="chip">🎯 Availability: Immediate</span>
+        <span class="chip">🏠 Work Preference: Remote or Hybrid</span>
+        <span class="chip">📋 Authorization: Authorized to work in the United States</span>
+      </div>
+    </section>
+
+    <section class="section anim show" style="transition-delay: 120ms;">
+      <h2>Core competencies</h2>
+
+      <div class="subgrid">
+        <div>
+          <div class="item-head">Testing &amp; Quality Assurance</div>
+          <ul>
+            <li>Manual &amp; Automated Testing (Selenium, UFT, LoadRunner, QTP, Playwright)</li>
+            <li>Test Case Design, Execution &amp; Automation Framework Development</li>
+            <li>UAT | Regression | Functional | Load &amp; Stress Testing | Containerized Testing</li>
+            <li>Defect Tracking &amp; Management (JIRA, Bugzilla, HP ALM)</li>
+            <li>End-to-End Testing | SDLC | Agile/Scrum Methodologies</li>
+            <li>Descriptive Object Oriented Programing</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="item-head">Security &amp; Penetration Testing</div>
+          <ul>
+            <li>Web Application Penetration Testing</li>
+            <li>Vulnerability Assessment &amp; IT Security Foundations</li>
+            <li>Ethical Hacking &amp; Security Analysis</li>
+            <li>Compliance Standards &amp; Risk Assessment</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="item-head">Emerging Technologies</div>
+          <ul>
+            <li>AI/ML Model Performance Testing &amp; Validation</li>
+            <li>Prompt Engineering &amp; AI Ethics</li>
+            <li>Bias Detection &amp; Content Moderation</li>
+            <li>AI Data Annotation, Labeling &amp; Transcription</li>
+            <li>Dataset Validation &amp; Quality Assurance</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="item-head">Technical Proficiencies</div>
+          <ul>
+            <li>Operating Systems: Linux, Windows, Android</li>
+            <li>Version Control: Git, GitHub</li>
+            <li>Performance Monitoring: LoadRunner, Performance Testing Tools</li>
+            <li>Documentation: Technical Reporting &amp; Process Documentation</li>
+            <li>Collaboration: Remote Team Collaboration &amp; Communication</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section anim show" style="transition-delay: 180ms;">
+      <h2>Professional experience</h2>
+      <div class="item-head">Freelance QA &amp; Testing Specialist | Remote</div>
+      <div class="item-meta">January 2024 – Present</div>
+      <ul>
+        <li>Executed comprehensive functional, UAT, and data testing across diverse software products</li>
+        <li>Conducted QA auditing for online content ensuring alignment with UX and compliance standards</li>
+        <li>Validated and optimized AI datasets for accuracy and labeling quality enhancement</li>
+        <li>Delivered accurate and timely transcriptions of audio and video resources</li>
+        <li>Monitored user-generated content for corporate standards and legal compliance</li>
+        <li>Enhanced AI model accuracy through precision data annotation in freelance engagements</li>
+      </ul>
+
+      <div class="item-head">QA Analyst | Citibank, San Antonio, TX</div>
+      <div class="item-meta">January 2016 – December 2016</div>
+      <ul>
+        <li>Automated critical QA processes, achieving 20% improvement in release cycle efficiency</li>
+        <li>Designed and implemented automated test cases for enterprise banking applications</li>
+        <li>Developed and maintained comprehensive test strategies, cases, scripts, and datasets for manual testing</li>
+        <li>Conducted extensive regression and user acceptance testing ensuring product reliability</li>
+        <li>Created test automation frameworks specifically optimized for mainframe terminal applications</li>
+        <li>Simulated production environments to facilitate advanced testing scenarios</li>
+        <li>Reduced defect closure times by 15% through optimized JIRA workflow implementation</li>
+        <li>Coordinated UAT execution in collaboration with cross-functional business teams</li>
+        <li>Developed comprehensive test data for effective UAT and System Integration processes</li>
+        <li>Completed mandatory compliance training including AB&amp;C, ADA, AML, BSA, SCRA, SSCRA, TCF, TCPA, and Fair Housing Law certifications</li>
+      </ul>
+
+      <div class="item-head">QA Intern | Datamatic's, Mumbai, India</div>
+      <div class="item-meta">July 2015 – December 2015</div>
+      <ul>
+        <li>Developed comprehensive test scenarios and executed regression and performance testing</li>
+        <li>Participated in bug triage meetings and defect resolution cycles</li>
+        <li>Generated test data to validate scenarios matching functional requirements</li>
+        <li>Monitored defect lifecycle management across all phases (open, repaired, retest)</li>
+        <li>Created detailed test cases through thorough review of functional specifications and technical design documents</li>
+      </ul>
+    </section>
+
+    <section class="section anim show" style="transition-delay: 240ms;">
+      <h2>Additional experience</h2>
+      <ul>
+        <li>Assembly Line Worker | Steves and Sons, San Antonio, TX (Aug 2021 – Feb 2022)</li>
+        <li>Store Associate | Picnik, San Antonio, TX (Oct 2020 – Jun 2021)</li>
+        <li>Guest Relations Associate | Hotel Indigo at The Alamo, San Antonio, TX (Jan 2014 – Jun 2015)</li>
+        <li>Independent Contractor | Yellow Checker Star Transportation, San Antonio, TX (Jan 2010 – Dec 2013)</li>
+        <li>Concierge | Holiday Inn Riverwalk, San Antonio, TX (Aug 2009 – Jul 2010)</li>
+        <li>Hotel Management Trainee | La Mansion Del Rio, San Antonio, TX (Jun 2007 – Dec 2008)</li>
+        <li>Hotel Operational Trainee | 22 Jermyn St Hotel, London, UK (Mar 2006 – Feb 2007)</li>
+      </ul>
+    </section>
+
+    <section class="section anim show" style="transition-delay: 300ms;">
+      <h2>Education &amp; certifications</h2>
+      <div class="subgrid">
+        <div>
+          <div class="item-head">Professional Certifications</div>
+          <ul>
+            <li>Certified Security Analyst (ECSA) | EC-Council University, NM — Credential ID: ECC43698256077</li>
+            <li>Certified Ethical Hacker (CEH) | EC-Council University, NM — Credential ID: ECC17929444435</li>
+            <li>Certified Software Tester (ISTQB) | International Software Testing Qualification Board — Credential ID: CTFL-0076651 (Dec 2015)</li>
+            <li>SDET Certification | St. Angelo University, Mumbai, IN (Oct 2015)</li>
+          </ul>
+        </div>
+        <div>
+          <div class="item-head">Academic Background</div>
+          <ul>
+            <li>Hospitality Management &amp; Operations | Rizvi College / American Hotel &amp; Lodging Association (Jul 2005)</li>
+            <li>Chennai College of Arts &amp; Commerce, Mumbai, IN (Feb 2001)</li>
+            <li>Bombay Cambridge High School, Mumbai, IN (Feb 1999)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section anim show" style="transition-delay: 360ms;">
+      <h2>Key achievements</h2>
+      <ul>
+        <li>20% improvement in release cycle efficiency through QA process automation</li>
+        <li>15% reduction in defect closure times via optimized workflow implementation</li>
+        <li>Successfully completed comprehensive compliance training across multiple regulatory frameworks</li>
+        <li>Demonstrated expertise in emerging AI/ML testing and validation methodologies</li>
+        <li>Proven track record of delivering high-quality results in remote and hybrid work environments</li>
+      </ul>
+
+      <div class="qr">
+        <img src="G:\work_main\resume-portfolio\assets\qr-code.png" alt="QR code to LinkedIn profile">
+        <div>
+          <div class="item-head">Scan to view my LinkedIn profile</div>
+          <div class="hint">Quick access for recruiters during print or mobile viewing.</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Theme persistence
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+    if ((savedTheme === 'dark') || (!savedTheme && prefersDark)) {
+      document.body.classList.add('dark');
+    }
+
+    // Toggle icon sync
+    const icon = () => document.body.classList.contains('dark') ? '☀️' : '🌙';
+    const themeBtn = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    themeIcon.textContent = icon();
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+      themeIcon.textContent = icon();
+    });
+
+    // Reveal animations
+    const reveal = () => {
+      document.querySelectorAll('.anim').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 40) el.classList.add('show');
+      });
+    };
+    document.addEventListener('scroll', reveal, {passive:true});
+    window.addEventListener('load', () => {
+      reveal();
+      // slight stagger for nicer effect on load
+      document.querySelectorAll('.anim').forEach((el,i)=> {
+        el.style.transitionDelay = (i * 60)+'ms';
+      });
+    });
+  </script>
+
+   <footer>
+    <p>“Polish the process. Elevate the impact.”</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
