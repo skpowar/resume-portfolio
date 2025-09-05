@@ -1,1 +1,88 @@
 
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #444;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+.qr-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-code {
+  width: 100px;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.qr-code:hover {
+  opacity: 0.8;
+}
+
+/* 🖨️ Hide QR code when printing */
+@media print {
+  .qr-wrapper {
+    display: none;
+  }
+}
+#toggleIcon {
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+body.dark-mode #toggleIcon {
+  transform: rotate(180deg);
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+a, .section-title, .list-group-item, .btn-outline-secondary {
+  transition: color 0.4s ease, border-color 0.4s ease, background-color 0.4s ease;
+}
+
+body.dark-mode a {
+  color: #90caf9;
+}
+
+body.dark-mode .section-title {
+  border-color: #90caf9;
+}
+
+body.dark-mode .list-group-item {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark-mode .btn-outline-secondary {
+  border-color: #90caf9;
+  color: #90caf9;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
