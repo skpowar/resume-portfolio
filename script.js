@@ -6,3 +6,6 @@ new Typed('#tagline', {
   loop: true
 });
 
+function toggleAccessibility() {
+  document.body.classList.toggle('accessible');
+}
